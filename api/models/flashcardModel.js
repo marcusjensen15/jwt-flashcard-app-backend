@@ -24,3 +24,5 @@ var CardSchema = new Schema({
     index: true
   }
 });
+
+module.exports = mongoose.model('Cards', CardSchema);
