@@ -5,8 +5,14 @@ var express = require('express'),
   Card = require('./api/models/rodoListModel');
   bodyParser = require('body-parser');
 
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/flashcarddb');
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
+var routes = require('./api/routes/flashcardRoutes'); //imports routes
+routes(app); //registers routes 
 
 app.listen(port);
 
