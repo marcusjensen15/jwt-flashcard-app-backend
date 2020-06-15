@@ -3,13 +3,13 @@ module.exports = function(app){
 
   //flashcard routes
   app.route('/cards')
-    .get(flashcards.list_all_cards);
+    .get(flashcards.list_all_cards)
     .post(flashcards.create_a_card);
 
 
   app.route('/cards/:cardId')
-    .get(flashcards.read_a_card);
-    .put(flashcards.update_a_card);
+    .get(flashcards.read_a_card)
+    .put(flashcards.update_a_card)
     .delete(flashcards.delete_a_card);
 
 

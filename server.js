@@ -2,7 +2,7 @@ var express = require('express'),
   app = express(),
   port = process.env.PORT || 4000;
   mongoose = require('mongoose');
-  Card = require('./api/models/rodoListModel');
+  Card = require('./api/models/flashcardModel');
   bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 var routes = require('./api/routes/flashcardRoutes'); //imports routes
-routes(app); //registers routes 
+routes(app); //registers routes
 
 app.listen(port);
 
