@@ -16,12 +16,6 @@ var CardSchema = new Schema({
   },
   user: {
     type: String
-  },
-  cardId:{
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    auto: true,
-    index: true
   }
 });
 

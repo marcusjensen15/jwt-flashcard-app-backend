@@ -20,15 +20,15 @@ var mongoose = require('mongoose'),
   };
 
   exports.read_a_card = function(req,res){
-    Card.findById(req.params.cardId, function(err, task){
+    Card.findById(req.params.cardId, function(err, card){
       if (err)
         res.send(err);
-      res.json(task);
+      res.json(card);
     });
   };
 
   exports.update_a_card = function(req,res){
-    Card.findOneAndUpdate({_id: req.params.taskId}, req.body, {new:true}, function(err, task){
+    Card.findOneAndUpdate({_id: req.params.cardId}, req.body, {new:true}, function(err, card){
       if(err)
         res.send(err);
       res.json(card);
@@ -38,9 +38,9 @@ var mongoose = require('mongoose'),
 
   exports.delete_a_card = function(req,res){
     Card.remove({
-      _id: req.params.taskId}, function(err, task){
+      _id: req.params.cardId}, function(err, card){
         if (err)
           res.send(err);
-          res.json({ message: "task has been deleted"});
+          res.json({ message: "card has been deleted"});
     });
   };
