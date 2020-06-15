@@ -26,3 +26,13 @@ var mongoose = require('mongoose'),
       res.json(card);
     });
   };
+
+
+  exports.delete_a_card = function(req,res){
+    Card.remove({
+      _id: req.params.taskId}, function(err, task){
+        if (err)
+          res.send(err);
+          res.json({ message: "task has been deleted"});
+    });
+  };
