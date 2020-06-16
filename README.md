@@ -1,3 +1,9 @@
 # flashcard-app-backend
 
-This is the backend for flashcard-app
+1. clone repo
+
+2. navigate to folder in two different terminal windows
+
+3.(activates database) in one terminal run: mongod
+
+4. In the other terminal, run: npm run start 
