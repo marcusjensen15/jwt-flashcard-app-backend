@@ -1,18 +1,20 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+// removing: required: 'message from each card to see what happens'
+
 var CardSchema = new Schema({
   cardFront: {
-    type: String,
-    required: 'add a front of card'
+    type: String
+
   },
   cardBack: {
-    type: String,
-    required: 'add a back of card'
+    type: String
+
   },
   cardDeck: {
-    type: String,
-    required: 'add a deck to this card'
+    type: String
+
   },
   user: {
     type: String
