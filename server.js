@@ -5,6 +5,7 @@ var express = require('express'),
   port = process.env.PORT || 4000;
   mongoose = require('mongoose');
   Card = require('./api/models/flashcardModel');
+  User = require('./api/models/userModel');
   bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 var routes = require('./api/routes/flashcardRoutes'); //imports routes
+
 routes(app); //registers routes
 
 app.listen(port);
