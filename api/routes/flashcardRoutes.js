@@ -1,5 +1,6 @@
 module.exports = function(app){
   var flashcards = require('../controllers/flashcardController');
+  // var userController = require('../controllers/userController');
 
   //flashcard routes
   app.route('/cards')
@@ -11,6 +12,11 @@ module.exports = function(app){
     .get(flashcards.read_a_card)
     .put(flashcards.update_a_card)
     .delete(flashcards.delete_a_card);
+
+  //auth routes
+
+  app.use("/auth", require("./auth"));
+
 
 
 };
