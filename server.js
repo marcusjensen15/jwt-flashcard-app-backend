@@ -1,3 +1,5 @@
+//this file is called index.js in jwt tutorial.
+
 var express = require('express'),
   app = express(),
   port = process.env.PORT || 4000;
