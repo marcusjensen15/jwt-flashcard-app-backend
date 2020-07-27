@@ -1,9 +1,10 @@
 const router = require('express').Router();
 // var userController = require('../controllers/userController');
-// var User = require('../model/userModel');
+var user = require('../model/userModel');
 
 router.post('/register', (req,res) => {
-  res.send('Register');
+  // res.send('Register');
+  user.create_a_user;
 });
 
 // router.route('/register')
