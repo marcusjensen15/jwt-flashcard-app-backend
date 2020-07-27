@@ -26,7 +26,8 @@ module.exports = function(app){
 
   app.route('/users/:userId')
     .get(user.read_a_user)
-    .delete(user.delete_a_user);
+    .delete(user.delete_a_user)
+    .put(user.update_a_user);
 
 
 };
