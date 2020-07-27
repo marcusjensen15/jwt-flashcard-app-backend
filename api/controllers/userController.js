@@ -25,3 +25,12 @@ exports.read_a_user = function(req,res){
     res.json(user);
   });
 };
+
+exports.delete_a_user = function(req,res){
+  User.remove({
+    _id: req.params.userId}, function(err, user){
+      if (err)
+        res.send(err)
+        res.json({message: "this user has been deleted"});
+  });
+};
