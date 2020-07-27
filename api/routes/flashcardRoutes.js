@@ -18,8 +18,10 @@ module.exports = function(app){
 
   // app.use("/auth", require("./auth"));
 
-  app.route('/auth/register')
-    .post(user.create_a_user)
+  app.route('/register')
+    .post(user.create_a_user);
+
+  app.route('/users')
     .get(user.list_all_users);
 
 
