@@ -9,3 +9,11 @@ exports.create_a_user = function(req,res){
     res.json(user);
   });
 };
+
+exports.list_all_users = function(req,res){
+  User.find({}, function(err, users){
+    if (err)
+      res.send(err);
+      res.json(users);
+  });
+};

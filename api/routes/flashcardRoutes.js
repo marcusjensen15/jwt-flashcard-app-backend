@@ -19,7 +19,8 @@ module.exports = function(app){
   // app.use("/auth", require("./auth"));
 
   app.route('/auth/register')
-    .post(user.create_a_user);
+    .post(user.create_a_user)
+    .get(user.list_all_users);
 
 
 
