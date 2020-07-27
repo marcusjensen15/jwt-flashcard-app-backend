@@ -8,5 +8,9 @@ router.post('/register', (req,res) => {
 
 // router.route('/register')
 //   .post(userController.create_a_user);
+router.get('/register', (req,res) => {
+  res.send('Register get route');
+});
+
 
 module.exports = router;
