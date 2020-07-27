@@ -24,6 +24,8 @@ module.exports = function(app){
   app.route('/users')
     .get(user.list_all_users);
 
+  app.route('/users/:userId')
+    .get(user.read_a_user);
 
 
 };
