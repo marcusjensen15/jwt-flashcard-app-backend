@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost/flashcarddb');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var routes = require('./api/routes/flashcardRoutes'); //imports routes
+var routes = require('./api/routes/index'); //imports routes
 
 routes(app); //registers routes
 
