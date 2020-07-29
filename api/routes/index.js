@@ -2,7 +2,7 @@
 // module.exports = function(app){
   // var flashcards = require('../controllers/flashcardController');
   const router = require('express').Router();
-  const { list_all_cards, create_a_card } = require('../controllers/flashcardController');
+  const { list_all_cards, create_a_card, read_a_card } = require('../controllers/flashcardController');
 
   router.get('/cards', (req,res) => {
     list_all_cards(req,res);
@@ -10,6 +10,10 @@
 
   router.post('/cards', (req,res) => {
     create_a_card(req,res);
+  });
+
+  router.get('/cards/:cardId', (req,res) => {
+    read_a_card(req,res);
   });
   // var user = require('../controllers/userController');
   // var userController = require('../controllers/userController');

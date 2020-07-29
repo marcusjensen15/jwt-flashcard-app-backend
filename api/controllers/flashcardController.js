@@ -19,7 +19,7 @@ const list_all_cards = (req,res) => {
     });
   };
 
-  exports.read_a_card = function(req,res){
+  const read_a_card = (req,res) => {
     Card.findById(req.params.cardId, function(err, card){
       if (err)
         res.send(err);
@@ -48,3 +48,4 @@ const list_all_cards = (req,res) => {
 
 module.exports.list_all_cards = list_all_cards;
 module.exports.create_a_card = create_a_card;
+module.exports.read_a_card = read_a_card;
