@@ -27,7 +27,7 @@ const list_all_cards = (req,res) => {
     });
   };
 
-  exports.update_a_card = function(req,res){
+  const update_a_card = (req,res) => {
     Card.findOneAndUpdate({_id: req.params.cardId}, req.body, {new:true}, function(err, card){
       if(err)
         res.send(err);
@@ -36,7 +36,7 @@ const list_all_cards = (req,res) => {
   };
 
 
-  exports.delete_a_card = function(req,res){
+  const delete_a_card = (req,res) => {
     Card.remove({
       _id: req.params.cardId}, function(err, card){
         if (err)
@@ -49,3 +49,5 @@ const list_all_cards = (req,res) => {
 module.exports.list_all_cards = list_all_cards;
 module.exports.create_a_card = create_a_card;
 module.exports.read_a_card = read_a_card;
+module.exports.update_a_card = update_a_card;
+module.exports.delete_a_card = delete_a_card;
