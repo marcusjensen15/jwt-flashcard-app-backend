@@ -10,7 +10,7 @@ const list_all_cards = (req,res) => {
   };
 
 
-  exports.create_a_card = function(req,res){
+  const create_a_card = (req,res) => {
     var new_card = new Card(req.body);
     new_card.save(function(err, card){
       if (err)
@@ -47,3 +47,4 @@ const list_all_cards = (req,res) => {
 
 
 module.exports.list_all_cards = list_all_cards;
+module.exports.create_a_card = create_a_card;
