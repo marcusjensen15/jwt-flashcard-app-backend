@@ -1,7 +1,7 @@
-var mongoose = require('mongoose'),
+var mongoose = require('mongoose');
   Card = mongoose.model('Cards');
 
-  exports.list_all_cards = function(req,res){
+const list_all_cards = (req,res) => {
     Card.find({}, function(err, card){
       if (err)
       res.send(err);
@@ -10,7 +10,7 @@ var mongoose = require('mongoose'),
   };
 
 
-  exports.create_a_card = function(req,res){
+  const create_a_card = (req,res) => {
     var new_card = new Card(req.body);
     new_card.save(function(err, card){
       if (err)
@@ -19,7 +19,7 @@ var mongoose = require('mongoose'),
     });
   };
 
-  exports.read_a_card = function(req,res){
+  const read_a_card = (req,res) => {
     Card.findById(req.params.cardId, function(err, card){
       if (err)
         res.send(err);
@@ -27,7 +27,7 @@ var mongoose = require('mongoose'),
     });
   };
 
-  exports.update_a_card = function(req,res){
+  const update_a_card = (req,res) => {
     Card.findOneAndUpdate({_id: req.params.cardId}, req.body, {new:true}, function(err, card){
       if(err)
         res.send(err);
@@ -36,7 +36,7 @@ var mongoose = require('mongoose'),
   };
 
 
-  exports.delete_a_card = function(req,res){
+  const delete_a_card = (req,res) => {
     Card.remove({
       _id: req.params.cardId}, function(err, card){
         if (err)
@@ -44,3 +44,10 @@ var mongoose = require('mongoose'),
           res.json({ message: "card has been deleted"});
     });
   };
+
+
+module.exports.list_all_cards = list_all_cards;
+module.exports.create_a_card = create_a_card;
+module.exports.read_a_card = read_a_card;
+module.exports.update_a_card = update_a_card;
+module.exports.delete_a_card = delete_a_card;
