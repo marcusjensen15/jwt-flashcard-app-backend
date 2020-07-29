@@ -1,7 +1,7 @@
-var mongoose = require('mongoose'),
+var mongoose = require('mongoose');
   Card = mongoose.model('Cards');
 
-  exports.list_all_cards = function(req,res){
+const list_all_cards = (req,res) => {
     Card.find({}, function(err, card){
       if (err)
       res.send(err);
@@ -44,3 +44,6 @@ var mongoose = require('mongoose'),
           res.json({ message: "card has been deleted"});
     });
   };
+
+
+module.exports.list_all_cards = list_all_cards;

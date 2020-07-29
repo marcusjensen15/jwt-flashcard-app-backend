@@ -1,14 +1,16 @@
 
 // module.exports = function(app){
-  var flashcards = require('../controllers/flashcardController');
+  // var flashcards = require('../controllers/flashcardController');
   const router = require('express').Router();
+  const { list_all_cards } = require('../controllers/flashcardController');
 
   router.get('/cards', (req,res) => {
-    Card.find({}, function(err, card){
-      if (err)
-      res.send(err);
-      res.json(card);
-    });
+    // Card.find({}, function(err, card){
+    //   if (err)
+    //   res.send(err);
+    //   res.json(card);
+    // });
+    list_all_cards(req,res);
   })
   // var user = require('../controllers/userController');
   // var userController = require('../controllers/userController');
