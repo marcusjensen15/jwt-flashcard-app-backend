@@ -20,3 +20,5 @@
 - Delete a card: delete request to localhost:4000/cards/:id
 - Create a card: post request to localhost:4000/cards - make sure to navigate to the body tab, select x-www-form-urlencoded, fill out keys/values.
 - Read a card: get request to localhost:4000/cards/:id
+
+Need to make userController the same as flashcardController
