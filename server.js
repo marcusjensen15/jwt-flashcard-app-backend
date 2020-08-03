@@ -40,9 +40,10 @@ app.use(bodyParser.json());
 
 //Register routes
 
-app.use('/api/user', authRoute);
+app.use('/register', authRoute);
 
 app.use('/data', cardRoutes);
+
 
 
 
