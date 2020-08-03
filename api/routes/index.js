@@ -1,8 +1,8 @@
 
-// module.exports = function(app){
-  // var flashcards = require('../controllers/flashcardController');
+
   const router = require('express').Router();
   const { list_all_cards, create_a_card, read_a_card, update_a_card, delete_a_card } = require('../controllers/flashcardController');
+    const { list_all_users, create_a_user, read_a_user, update_a_user, delete_a_user } = require('../controllers/userController');
 
   router.get('/cards', (req,res) => {
     list_all_cards(req,res);
@@ -23,6 +23,24 @@
   router.delete('/cards/:cardId', (req,res) => {
     delete_a_card(req,res);
   });
+
+  //User routes
+
+  router.get('/users', (req,res) => {
+    list_all_users(req,res);
+  });
+
+  router.get('/users/:userId', (req,res) =>{
+    read_a_user(req,res);
+  });
+  router.delete('/users/:userId', (req,res) =>{
+    delete_a_user(req,res);
+  });
+  router.put('/users/:userId', (req,res) =>{
+    update_a_user(req,res);
+  });
+
+
 
   // var user = require('../controllers/userController');
   // var userController = require('../controllers/userController');
