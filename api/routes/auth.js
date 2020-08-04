@@ -2,8 +2,9 @@ const router = require('express').Router();
 const User = require('../models/userModel');
 const {registerValidation, loginValidation} = require('../../validation');
 const { create_a_user } = require('../controllers/userController');
+const bcrypt = require('bcryptjs');
 
-router.post('', async (req,res) => {
+router.post('/register', async (req,res) => {
   const error = registerValidation(req.body);
 
   if(error.error) return res.status(400).send(error.error.details[0].message);
@@ -14,6 +15,8 @@ router.post('', async (req,res) => {
   create_a_user(req,res);
 
 });
+
+
 
 
 
