@@ -1,13 +1,7 @@
 const router = require('express').Router();
 const User = require('../models/userModel');
 const {registerValidation, loginValidation} = require('../../validation');
-  const { create_a_user } = require('../controllers/userController');
-
-// router.post('', (req,res) => {
-//   create_a_user(req,res);
-// });
-
-//below is experimental
+const { create_a_user } = require('../controllers/userController');
 
 router.post('', async (req,res) => {
   const error = registerValidation(req.body);
