@@ -15,10 +15,18 @@
 
 # Making request via postman
 
-- Get all cards: get requests to localhost:4000/cards
-- Update a card: put request to localhost:4000/cards/:id - make sure to navigate to the body tab, select x-www-form-urlencoded, fill out keys/values.
-- Delete a card: delete request to localhost:4000/cards/:id
-- Create a card: post request to localhost:4000/cards - make sure to navigate to the body tab, select x-www-form-urlencoded, fill out keys/values.
-- Read a card: get request to localhost:4000/cards/:id
+# User Routes
 
-Need to make userController the same as flashcardController
+- Create user: POST localhost:4000/api/user/register
+- Get all users: GET localhost:4000/api/user
+- Get specific user: GET localhost:4000/api/user/:userId
+- Delete a user: DELETE localhost:4000/api/user/:userId
+- Update a user: PUT localhost:4000/api/user/:userId
+
+# Card Routes
+
+- Fetch all cards: GET localhost:4000/data/cards
+- Add a card: POST localhost:4000/data/cards
+- Get a specific card: GET localhost:4000/data/cards/:cardId
+- Edit a card: PUT localhost:4000/data/cards/:cardId
+- Deletea a card: DELETE localhost:4000/data/cards/:cardId
