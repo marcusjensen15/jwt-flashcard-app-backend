@@ -35,21 +35,11 @@ app.use(bodyParser.json());
 
 // routes(app);
 
-
-//Below is experimental
-
 //Register routes
 
 app.use('/api/user', authRoute);
 
 app.use('/data', cardRoutes);
-
-
-
-
-
-//Above is experiemental
-
 
 
 
