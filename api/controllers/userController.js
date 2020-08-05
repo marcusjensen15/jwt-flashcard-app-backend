@@ -3,12 +3,14 @@ const bcrypt = require('bcryptjs');
   User = mongoose.model('User');
 
  const create_a_user = async (req,res) => {
+   
   const salt = await bcrypt.genSalt(10);
   const hashPassword = await bcrypt.hash(req.body.password, salt);
   var new_user = new User({
     email: req.body.email,
     password: hashPassword
   });
+
   new_user.save(function(err, user){
     if (err)
       res.send(err);
