@@ -2,9 +2,10 @@
 
   const router = require('express').Router();
   const { list_all_cards, create_a_card, read_a_card, update_a_card, delete_a_card } = require('../controllers/flashcardController');
-    const { list_all_users, create_a_user, read_a_user, update_a_user, delete_a_user } = require('../controllers/userController');
+  const { list_all_users, create_a_user, read_a_user, update_a_user, delete_a_user } = require('../controllers/userController');
+  const verify = require('./verifyToken');
 
-  router.get('/cards', (req,res) => {
+  router.get('/cards', verify, (req,res) => {
     list_all_cards(req,res);
   });
 
