@@ -42,4 +42,8 @@
 
 # Accessing the protected route:
 
-- POST Request to localhost:4000/api/user/login with registered login credentials. 
+- POST Request to localhost:4000/api/user/login with registered login credentials.
+- If login is successful, it will return a valid JWT token.
+- Copy returned JWT token, navigate to 'Headers' area of Postman. Create key called 'auth-token'. In value column, paste the auth token. Make sure far left box is checked.
+- Make GET request to localhost:4000/data/cards. Should return all cards.
+- If you get error: 'Invalid Token' it means the token is no longer valid, or was altered. If you get error: 'Access Denied', this means you forgot to put in your token 
