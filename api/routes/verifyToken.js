@@ -4,7 +4,7 @@ const tokenSecret = require('../../tokenSecret');
 //we can add this function to any route that we want to be private (or protected)
 //perhaps upon logout we can delete the 'verified' property.
 
-module.exports = auth = (req,res,next) => {
+module.exports = (req,res,next) => {
 
   const token = req.header('auth-token');
 
@@ -13,8 +13,9 @@ module.exports = auth = (req,res,next) => {
   //adds property to request object called user, sets it to 'verifed'. We are going to have access to req.user in all of our code.
 
   try {
-    const verifed = jwt.verify(token, tokenSecret.secret);
+    const verified = jwt.verify(token, tokenSecret.secret);
     req.user = verified;
+    next();
   }
   catch (err) {
     res.status(400).send('Invalid Token');
