@@ -30,3 +30,10 @@
 - Get a specific card: GET localhost:4000/data/cards/:cardId
 - Edit a card: PUT localhost:4000/data/cards/:cardId
 - Deletea a card: DELETE localhost:4000/data/cards/:cardId
+
+
+# To Do List
+
+- Figure out how 'Log Out' will work.
+- Private routes: only able to access cards if user is logged in.
+- Write real verification middleware.
