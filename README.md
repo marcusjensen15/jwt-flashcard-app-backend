@@ -36,6 +36,7 @@
 - Edit a card: PUT localhost:4000/data/cards/:cardId
 - Deletea a card: DELETE localhost:4000/data/cards/:cardId
 
+
 # Using Protected routes
 
 - Only protected route right now: localhost:4000/data/cards
@@ -47,3 +48,11 @@
 - Copy returned JWT token, navigate to 'Headers' area of Postman. Create key called 'auth-token'. In value column, paste the auth token. Make sure far left box is checked.
 - Make GET request to localhost:4000/data/cards. Should return all cards.
 - If you get error: 'Invalid Token' it means the token is no longer valid, or was altered. If you get error: 'Access Denied', this means you forgot to put in your token 
+
+
+# To Do List
+
+- Figure out how 'Log Out' will work.
+- Private routes: only able to access cards if user is logged in. (now need to go protect all necessary routes)
+- Write real verification middleware. (complete) 
+
