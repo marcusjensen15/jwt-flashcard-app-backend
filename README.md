@@ -53,6 +53,5 @@
 # To Do List
 
 - Figure out how 'Log Out' will work.
-- Private routes: only able to access cards if user is logged in. (now need to go protect all necessary routes)
-- Write real verification middleware. (complete) 
+- Protect other Routes
 
