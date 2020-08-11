@@ -9,35 +9,36 @@
     list_all_cards(req,res);
   });
 
-  router.post('/cards', (req,res) => {
+  router.post('/cards', verify, (req,res) => {
     create_a_card(req,res);
   });
 
-  router.get('/cards/:cardId', (req,res) => {
+  router.get('/cards/:cardId', verify, (req,res) => {
     read_a_card(req,res);
   });
 
-  router.put('/cards/:cardId', (req,res) => {
+  router.put('/cards/:cardId', verify, (req,res) => {
     update_a_card(req,res);
   });
 
-  router.delete('/cards/:cardId', (req,res) => {
+  router.delete('/cards/:cardId', verify, (req,res) => {
     delete_a_card(req,res);
   });
 
   //User routes
+  //Will need to write a special middleware to verify admins
 
-  router.get('/users', (req,res) => {
+  router.get('/users', verify, (req,res) => {
     list_all_users(req,res);
   });
 
-  router.get('/users/:userId', (req,res) =>{
+  router.get('/users/:userId', verify, (req,res) =>{
     read_a_user(req,res);
   });
-  router.delete('/users/:userId', (req,res) =>{
+  router.delete('/users/:userId', verify, (req,res) =>{
     delete_a_user(req,res);
   });
-  router.put('/users/:userId', (req,res) =>{
+  router.put('/users/:userId', verify, (req,res) =>{
     update_a_user(req,res);
   });
 
