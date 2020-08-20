@@ -28,14 +28,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-//imports routes
-
-// var routes = require('./api/routes/index');
-
-
-// routes(app);
-
-//Register routes
 
 app.use('/api/user', authRoute);
 
