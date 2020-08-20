@@ -53,5 +53,5 @@
 # To Do List
 
 - Figure out how 'Log Out' will work.
-- Protect other Routes
+- Protect other Routes (Highest Priority)
 
