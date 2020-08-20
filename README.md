@@ -53,4 +53,6 @@
 # To Do List
 
 - Figure out how 'Log Out' will work (current high priority).
-
+- Make JWT expire after one day (also in article).
+- https://medium.com/devgorilla/how-to-log-out-when-using-jwt-a8c7823e8a6
+- Need to delete the token stored on the client (front end). It is apparently best practice to perform 'logout'
