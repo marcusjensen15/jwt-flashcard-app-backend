@@ -52,4 +52,4 @@
 
 # To Do List
 
-- Figure out how 'Log Out' will work.
+- Figure out how 'Log Out' will work (current high priority).

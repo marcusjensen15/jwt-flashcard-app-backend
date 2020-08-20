@@ -26,6 +26,7 @@
   });
 
   //User routes
+  
   //Will need to write a special middleware to verify admins
 
   router.get('/users', verify, (req,res) => {
@@ -42,38 +43,5 @@
     update_a_user(req,res);
   });
 
-
-
-  // var user = require('../controllers/userController');
-  // var userController = require('../controllers/userController');
-
-  //flashcard routes
-  // app.route('/cards')
-  //   .get(flashcards.list_all_cards)
-  //   .post(flashcards.create_a_card);
-
-
-  // app.route('/cards/:cardId')
-  //   .get(flashcards.read_a_card)
-  //   .put(flashcards.update_a_card)
-  //   .delete(flashcards.delete_a_card);
-
-  //auth routes
-
-  // app.use("/auth", require("./auth"));
-
-  // app.route('/register')
-  //   .post(user.create_a_user);
-  //
-  // app.route('/users')
-  //   .get(user.list_all_users);
-  //
-  // app.route('/users/:userId')
-  //   .get(user.read_a_user)
-  //   .delete(user.delete_a_user)
-  //   .put(user.update_a_user);
-
-
-// };
 
 module.exports = router;
