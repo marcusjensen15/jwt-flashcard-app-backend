@@ -13,6 +13,8 @@
 
 6. If #3 doesn't work, try running: brew services start mongodb-community@4.4
 
+7. To top mongo db -> brew services stop mongodb-community@4.4
+
 
 
 # Making request via postman - All Routes are protected (Require login first)
