@@ -19,8 +19,8 @@
 
 # User Routes
 
-- Create user: POST localhost:4000/api/user/register
-- Get all users: GET localhost:4000/api/user
+- Create user: POST localhost:4000/api/user/register (doesn't require login)
+- Get all users: GET localhost:4000/data/users
 - Get specific user: GET localhost:4000/api/user/:userId
 - Delete a user: DELETE localhost:4000/api/user/:userId
 - Update a user: PUT localhost:4000/api/user/:userId
@@ -41,7 +41,7 @@
 
 # Using Protected routes
 
-- Only protected route right now: localhost:4000/data/cards
+- All routes protected except user registration 
 
 # Accessing the protected route:
 
