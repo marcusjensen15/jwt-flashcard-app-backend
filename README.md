@@ -1,6 +1,6 @@
 # flashcard-app-backend
 
-1. clone repo
+1. clone repo. May need to delete package-lock.json, yarn.lock, node modules. Run npm i again.
 
 2. navigate to folder in two different terminal windows
 
@@ -10,6 +10,8 @@
 
 
 5. make sure that the "CORS" chrome tab is turned on
+
+6. If #3 doesn't work, try running: brew services start mongodb-community@4.4
 
 
 
